@@ -42,7 +42,7 @@ ros2 run turtlesim turtlesim_node
 ```
 In other terminal, run the teleop mode
 ```
-ros2 run turtlesim turtle_teleop
+ros2 run turtlesim turtle_teleop_key
 ```
 
 ## 3. ROS2 Node Commands
@@ -123,6 +123,63 @@ ros2 topic echo /turtle1/pose
 ros2 opic hz <topic_name>
 ros2 opic hz /turtle1/pose
 ```
+**Close All Terminals here**
+## 5. ROS Services
+**Services are used to communicate between nodes using a client-server model, where the server respondes when the client make a request**
+1. In new terminal, run
+```
+ros2 run turtlesim turtlesim_node
+```
+2. In another terminal, run
+```
+ros2 run turtlesim turtle_teleop
+```
+3. List all services names
+```
+ros2 service list
+
+# see service type
+ros2 service list -t
+```
+4. view service type another way
+```
+ros2 service type <service_name>
+ros2 service type /clear
+```
+5. Find service with a specific type
+```
+ros2 service find <service_type>
+ros2 service find std_srvs/srv/Empty
+```
+6. See interface
+```
+ros2 interface show <service_type>
+ros2 interface show turtlesim/srv/Spawn
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
